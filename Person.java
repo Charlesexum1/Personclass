@@ -1,16 +1,24 @@
-/*
- * Person.java
- * 
- * Copyright 2016 graf <graf@chillosphere.spacepotato>
- * 
- * 
- */
-
-
 public class Person {
+	
+	
 	
 	private String name;
 	private int age;
+	
+	public Person() {
+		name = "No name yet.";
+		age = 0;
+		}
+	public Person(int newAge, String newName) {
+		name = newName;
+		age = newAge;
+		}
+		
+	
+	public static Person createAdult() {
+		return new Person(21, "Otis");		
+		}	
+			
 	
 	public void setInfo(String newName, int newAge) { // mutator method
 		name = newName;
@@ -21,7 +29,7 @@ public class Person {
 		}
 	public String getName() { // "" ""
 		return name;
-		}	
+		}
 	public boolean comparePeople(Person otherPerson){
 		return (this.name.equals(otherPerson.name)) &&
 			   (this.age == otherPerson.age);
@@ -51,7 +59,9 @@ public class Person {
 		System.out.println(alsoGraf.compareAge(Graf));
 		System.out.println(alsoGraf.isOlder(Graf));
 		System.out.println(alsoGraf.isYounger(Graf));
+		Person adult = Person.createAdult();
+		System.out.println(adult.getName());
+		
 		
 	}
 }
-
