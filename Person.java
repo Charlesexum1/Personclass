@@ -1,7 +1,5 @@
 public class Person {
-	
-	
-	
+		
 	private String name;
 	private int age;
 	
@@ -13,17 +11,43 @@ public class Person {
 		name = newName;
 		age = newAge;
 		}
-		
+	public Person(int newAge) {
+		age = newAge;
+		}	
+	public Person(String newName) {
+		name = newName;
+		}	
 	
 	public static Person createAdult() {
-		return new Person(21, "Otis");		
-		}	
+		return new Person(21, "Otis Clear-Britches");		
+		}
+	public static Person createToddler() {
+		return new Person(2, "wee baby!");
+		}
+	public static Person createPreschooler(){
+		return new Person(4, "Henry Oxenhorn");
+		}
+	public static Person createAdolescent() {
+		return new Person(12, "Mira Rugburner");
+		}
+	public static Person createTeen() {
+		return new Person (16, "Alexander Bucks-A-Plenty");
+		}					
 			
 	
 	public void setInfo(String newName, int newAge) { // mutator method
 		name = newName;
 		age = newAge;
 		}
+	public void setFullName(String firstandlast) {
+		name = firstandlast;
+		}
+	public void setName(String first, String last){
+		name = first + " " + last;
+		}	
+	public void setAge(int newAge) {
+		age = newAge;
+		}	
 	public int getAge() { // accessor method
 		return age;
 		}
